@@ -43,13 +43,30 @@
 	\paragraph{There are other notions of fairness besides envy-freeness. Proportional fairness is weaker; it only demands each person gets what she feels is at least 
 		$\frac{1}{n}$ of the cake. You might enjoy figuring out an N-person proportional procedure.}
 	\section{Conclusion.}
+	\paragraph{In the case that there are two agents amongst whom a heterogeneous, divisible
+		good is to be divided, the classic algorithms that can be used to arrive at
+		an allocation are the Cut and Choose, the Banach-Knaster, and the Even-Paz
+		algorithm. However, as the Banach-Knaster algorithm is identical to the Cut
+		and Choose procedure when n = 2, this option is disregarded. The Cut and
+		Choose algorithm is a suitable choice to allocate a heterogeneous, divisible
+		good amongst two agents, as the allocation is guaranteed to be envy-free, as for
+		the agents \\
+		N = \{i,j\}, V$_{i}$(A$_{i}$) = 0.5 and V$_{j}$(A$_{j}$) $\geq$ 0.5.}
+	\paragraph{The Even-Paz algorithm is
+		also guaranteed to produce an envy-free allocation if n = 2, where V$_{i}$(A$_{i}$) $\geq$ 0.5
+		and V$_{j}$(A$_{j}$) $\geq$ 0.5. As the Even-Paz algorithm allows for the possibility that both
+		agents value their allocation as being worth more than half the value of the
+		good, this algorithm is preferable over the Cut and Choose algorithm in the
+		case that n = 2 in terms of fairness. The complexity of the two algorithms in
+		terms of Robertson-Webb queries is equal, as both procedures each issue one
+		query to each agent.}
 	
 	\section{References:}
 	\begin{itemize}
 		\item {How to write a problem statement (2009, march 18th). Retrieved from   http://www.ceptara.com/blog/how-to-write-problem-statement}
 		
 		\item {https://en.wikipedia.org/wiki/Efficient-cake-cutting}
-		\item https://www.math.hmc.edu/funfacts/ffiles/30001.4-8.shtml, Math for fun.
+		\item Su, Francis E., et al. "Envy-free Cake Division." Math Fun Facts. <http://www.math.hmc.edu/funfacts>.
 	\end{itemize}
 	
 	
