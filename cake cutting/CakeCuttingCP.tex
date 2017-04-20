@@ -19,8 +19,8 @@
 		But for the Envy-Free Division among 4 or more people has been an open problem until 1990s}
 	\paragraph{Two lower bounds on the run-time complexity of envy-freeness have been published in the 2000s.}
 	\begin{itemize}
-		\item For general pieces, the lower bound is $\Omega$(n$^{2}$).
-		\item For connected pieces the lower bound is infinity - there is provably no finite protocol for 3 or more partners.
+		\item \textbf{For general pieces, the lower bound is $\Omega$(n$^{2}$).}
+		\item \textbf{For connected pieces the lower bound is infinity - there is provably no finite protocol for 3 or more partners.}
 	\end{itemize}
 	\paragraph{In the 2010s, several approximation procedures and procedures for special cases have been published. The question whether bounded-time procedures exist for the case of general pieces had remained open for a long time. The problem was finally solved in 2016. Haris Aziz and Simon Mackenzie presented a discrete envy-free protocol that requires \\
 		at most ${\displaystyle n^{n^{n^{n^{n^{n}}}}}}$ queries. There is still a very large gap between the lower bound and the procedure. As of August 2016, the exact run-time complexity of envy-freeness is still unknown. }
@@ -30,13 +30,26 @@
 	\paragraph{Common human behaviour of taking the lion's share during sharing different resources like food, money, land etc. has caused lot of harm and hatred between people that has even lead to unknown deaths. This is all due to lack of a procedure that can be taken to carry out a fair process of the sharing activity. }
 
 	\section{Methodology.}
-	\paragraph{}
+	\paragraph{Say you and a friend wish to share a cake. What is a "fair" way to split it? Probably you know this solution: one cuts, the other chooses. This is called a fair division algorithm, because by playing a good strategy, each player can guarantee she gets at least 50 percent of the cake in her own measure. See if you can reason why.}
+	\paragraph{Now, what about for 3 people? Is there an algorithm that guarantees each person what she feels is the largest piece? Such a division is called an envy-free division. Here is a procedure due to Selfridge and Conway. We mark strategies [in brackets]. Suppose the players are named Alice, Betty, Chuck.}
+	\begin{enumerate}
+		\item \textbf{Alice cuts [into what she thinks are thirds].}
+		\item \textbf{Betty trims one piece [to create a 2-way tie for largest], and sets the trimmings aside.}
+		\item \textbf{Let Chuck pick a piece, then Betty, then Alice. Require Betty to take a trimmed piece if Charlie does not. Call the person who tooked the trimmed piece T, and the other (of Betty and Chuck) NT.}
+		\item \textbf{To deal with the trimmings, let NT cut them [into what she thinks are thirds].}
+		\item \textbf{Let players pick pieces in this order: T, Alice, then NT.}
+	\end{enumerate}
+	\paragraph{It is a good exercise to verify why each person is envy-free by the end of the procedure. The key observation is that for the trimmings, Alice has an "irrevocable advantage" with respect to T, since Alice will never envy T even if T gets all the trimmings. Thus Alice can pick after T, and this allows the procedure to terminate in a finite number of steps. For 4 or more players, there is an envy-free solution that is very complex, and can take arbitrarily long to resolve. See the references.}
+	\paragraph{There are other notions of fairness besides envy-freeness. Proportional fairness is weaker; it only demands each person gets what she feels is at least 
+		$\frac{1}{n}$ of the cake. You might enjoy figuring out an N-person proportional procedure.}
 	\section{Conclusion.}
+	
 	\section{References:}
 	\begin{itemize}
 		\item {How to write a problem statement (2009, march 18th). Retrieved from   http://www.ceptara.com/blog/how-to-write-problem-statement}
 		
 		\item {https://en.wikipedia.org/wiki/Efficient-cake-cutting}
+		\item https://www.math.hmc.edu/funfacts/ffiles/30001.4-8.shtml, Math for fun.
 	\end{itemize}
 	
 	
