@@ -1,0 +1,62 @@
+\documentclass[12pt]{report}
+
+\title{\textbf{CAKE CUTTING WITH LOW ENVY.}}
+
+\author{}
+\renewcommand\thesection{\arabic{section}}
+\begin{document}
+\maketitle
+
+	\section{Introduction.} 
+	\paragraph{Cake cutting with low envy is a fair cutting procedure / algorithm that is used to share something divisible into portions that are satisfying to all partners that what they have got is similar and as good as the other. }
+		\section{Background.}
+		\paragraph{The stronger criterion of envy-freeness was introduced into the cake-cutting problem by George Gamow and Marvin Stern in 1950s.\\
+			A procedure for 3 partners and general pieces was found in 1960. A procedure for 3 partners and connected pieces was found only in 1980.\\
+			But for the Envy-Free Division among 4 or more people has been an open problem until 1990s}
+		\paragraph{Two lower bounds on the run-time complexity of envy-freeness have been published in the 2000s.}
+		\begin{itemize}
+			\item For general pieces, the lower bound is $\Omega$(n$^{2}$).
+			\item For connected pieces the lower bound is infinity - there is provably no finite protocol for 3 or more partners.
+		\end{itemize}
+		\paragraph{In the 2010s, several approximation procedures and procedures for special cases have been published. The question whether bounded-time procedures exist for the case of general pieces had remained open for a long time. The problem was finally solved in 2016. Haris Aziz and Simon Mackenzie presented a discrete envy-free protocol that requires \\
+			at most ${\displaystyle n^{n^{n^{n^{n^{n}}}}}}$ queries. There is still a very large gap between the lower bound and the procedure. As of August 2016, the exact run-time complexity of envy-freeness is still unknown. }
+		\paragraph{For the case of connected pieces, it was noted that the hardness result assumes that the entire cake must be divided. If this requirement is replaced by the weaker requirement that every partner receives a proportional value (at least $\frac{1}{n}$ of the total cake value according to their own valuation), then a bounded procedure for 3 partners is known, but it has remained an open problem whether there exist bounded-time procedures for 4 or more partners.
+		}
+		\section{Problem statement.}
+		\paragraph{Common human behaviour of taking the lion's share during sharing different resources like food, money, land etc. has caused lot of harm and hatred between people that has even lead to unknown deaths. This is all due to lack of a procedure that can be taken to carry out a fair process of resource sharing activity. }
+		
+		\section{Objectives.}
+		\subsection{Main Objective:}
+		\paragraph{Before the invention of the cake cutting algorithm, it was unknown whether a finite number of people could share a particular resource in an envy-free manner. The main objective of this algorithm is to create and generate sharing procedures with the lowest extent of envy for various cases of resource allocation.}
+		\subsection{Specific Objectives:}
+		\begin{itemize}
+			\item To research and present several algorithms that either exactly or approximately benefit optimization of envy-free allocation of resources.
+			\item To specify implementations and specifications of these algorithms as required under various instances.
+		\end{itemize}
+\section{Methodology.}
+\paragraph{Say you and a friend wish to share a cake. What is a "fair" way to split it? Probably you know this solution: one cuts, the other chooses. This is called a fair division algorithm, because by playing a good strategy, each player can guarantee she gets at least 50 percent of the cake in her own measure. See if you can reason why. Now, what about for 3 people? Is there an algorithm that guarantees each person what she feels is the largest piece? Such a division is called an envy-free division. Here is a procedure due to Selfridge and Conway. We mark strategies [in brackets]. Suppose the players are named Alice, Betty, Chuck.}
+\begin{enumerate}
+	\item \textbf{Alice cuts [into what she thinks are thirds].}
+	\item \textbf{Betty trims one piece [to create a 2-way tie for largest], and sets the trimmings aside.}
+	\item \textbf{Let Chuck pick a piece, then Betty, then Alice. Require Betty to take a trimmed piece if Charlie does not. Call the person who tooked the trimmed piece T, and the other (of Betty and Chuck) NT.}
+	\item \textbf{To deal with the trimmings, let NT cut them [into what she thinks are thirds].}
+	\item \textbf{Let players pick pieces in this order: T, Alice, then NT.}
+\end{enumerate}
+\paragraph{It is a good exercise to verify why each person is envy-free by the end of the procedure. The key observation is that for the trimmings, Alice has an "irrevocable advantage" with respect to T, since Alice will never envy T even if T gets all the trimmings. Thus Alice can pick after T, and this allows the procedure to terminate in a finite number of steps. For 4 or more players, there is an envy-free solution that is very complex, and can take arbitrarily long to resolve. (See the references). There are other notions of fairness besides envy-freeness. Proportional fairness is weaker; it only demands each person gets what she feels is at least 
+	$\frac{1}{n}$ of the cake. You might enjoy figuring out an N-person proportional procedure.}
+\section{Conclusion.}
+	\paragraph{In the case that there are two agents amongst whom a heterogeneous, divisible good is to be divided, the classic algorithms that can be used to arrive at an allocation are the Cut and Choose, the Banach-Knaster, and the Even-Paz algorithm. However, as the Banach-Knaster algorithm is identical to the Cut and Choose procedure when n = 2, this option is disregarded. The Cut and	Choose algorithm is a suitable choice to allocate a heterogeneous, divisible good amongst two agents, as the allocation is guaranteed to be envy-free, as for the agents \\
+		N = \{i,j\}, V$_{i}$(A$_{i}$) = 0.5 and V$_{j}$(A$_{j}$) $\geq$ 0.5.}
+\paragraph{The Even-Paz algorithm is also guaranteed to produce an envy-free allocation if n = 2, where V$_{i}$(A$_{i}$) $\geq$ 0.5 and V$_{j}$(A$_{j}$) $\geq$ 0.5. As the Even-Paz algorithm allows for the possibility that both	agents value their allocation as being worth more than half the value of the	good, this algorithm is preferable over the Cut and Choose algorithm in the case that n = 2 in terms of fairness. The complexity of the two algorithms in terms of Robertson-Webb queries is equal, as both procedures each issue one query to each agent.}
+	\section{References:}
+	\begin{itemize}
+		
+	    \item {https://en.wikipedia.org/wiki/Efficient-cake-cutting}
+		\item {https://www.en.wikipedia.org/wiki/envy-freeness}
+		\item {Su, Francis E., et al. "Envy-free Cake Division." Math Fun Facts. http://www.math.hmc.edu/funfacts.}
+
+	\end{itemize}
+	
+	
+	
+\end{document}
